@@ -27,12 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const node = entry.target;
                 const target = Number(node.dataset.count || 0);
+                const suffix = node.dataset.suffix || "";
                 const duration = 1100;
                 const start = performance.now();
 
                 const tick = (timestamp) => {
                     const progress = Math.min((timestamp - start) / duration, 1);
-                    node.textContent = String(Math.round(target * progress));
+                    node.textContent = `${Math.round(target * progress)}${suffix}`;
                     if (progress < 1) {
                         requestAnimationFrame(tick);
                     }
