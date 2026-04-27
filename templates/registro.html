@@ -1,0 +1,120 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoSalud | Crear Cuenta</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-card">
+            <header class="card-header">
+                <h2>Crear cuenta</h2>
+                <p>Ãšnete a GeoSalud para gestionar tus citas mÃ©dicas</p>
+            </header>
+
+            <form class="register-form" action="index.html">
+                <div class="form-row">
+                    <div class="input-group flex-2">
+                        <label>D.N.I.</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-id-card icon-l"></i>
+                            <select required>
+                                <option value="dni">D.N.I.</option>
+                                <option value="ce">C.E.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group flex-3">
+                        <label>NÃºmero de Documento</label>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Ej. 70654321" required pattern="[0-9]{8,12}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Caracter Verificador</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-fingerprint icon-l"></i>
+                        <input type="text" maxlength="1" placeholder="DÃ­gito" required>
+                        <i class="fas fa-info-circle icon-r" title="DÃ­gito despuÃ©s del guion en tu DNI"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Fecha de Nacimiento</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-calendar-day icon-l"></i>
+                        <input type="date" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Correo ElectrÃ³nico</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope icon-l"></i>
+                        <input type="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Celular</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-mobile-alt icon-l"></i>
+                        <input type="tel" placeholder="999 999 999" required pattern="[0-9]{9}">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>ContraseÃ±a</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock icon-l"></i>
+                        <input type="password" class="pwd-input" placeholder="MÃ­nimo 8 caracteres" required minlength="8">
+                        <i class="fas fa-eye-slash toggle-pwd icon-r"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Confirmar ContraseÃ±a</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-shield-alt icon-l"></i>
+                        <input type="password" class="pwd-input" placeholder="Repite tu contraseÃ±a" required>
+                        <i class="fas fa-eye-slash toggle-pwd icon-r"></i>
+                    </div>
+                </div>
+
+                <div class="options-group">
+                    <label class="custom-check">
+                        <input type="checkbox" id="terms" required> 
+                        <span class="checkmark"></span>
+                        TÃ©rminos y Condiciones de Uso
+                    </label>
+                    <label class="custom-check">
+                        <input type="checkbox" id="privacy" required> 
+                        <span class="checkmark"></span>
+                        AutorizaciÃ³n para el Tratamiento de Datos Personales
+                    </label>
+                </div>
+
+                <button type="submit" id="btnSubmit" class="btn-reg-main" disabled>Registrarme</button>
+            </form>
+
+            <footer class="card-footer">
+                <p>Â¿Ya tienes una cuenta?</p>
+                <a href="login.html" class="btn-reg-sec">Inicia tu SesiÃ³n</a>
+            </footer>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+

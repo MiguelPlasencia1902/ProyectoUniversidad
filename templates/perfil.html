@@ -1,0 +1,102 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GeoSalud | Mi Perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color:white; text-decoration:none;">
+                <i class="fas fa-heartbeat"></i> GeoSalud
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="admin_citas.html">Panel Admin</a>
+            <button class="btn-logout">Cerrar SesiÃ³n</button>
+        </div>
+    </nav>
+
+    <div class="container-perfil">
+        <!-- Sidebar -->
+        <aside class="perfil-sidebar">
+            <div class="user-avatar">
+                <img id="userAvatar" src="https://ui-avatars.com/api/?name=Usuario&background=0076BE&color=fff&size=128" alt="Foto de perfil">
+            </div>
+            <div class="user-info-basic">
+                <h2 id="userFullName">Cargando...</h2>
+                <p class="role" id="userRole">Paciente</p>
+            </div>
+            <nav class="perfil-menu">
+                <a href="#" class="active"><i class="fas fa-user"></i> Datos Personales</a>
+                <a href="#"><i class="fas fa-file-medical"></i> Historial MÃ©dico</a>
+                <a href="#"><i class="fas fa-calendar-alt"></i> Mis Citas</a>
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacidad</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="perfil-content">
+            <section class="perfil-section">
+                <h3>InformaciÃ³n Personal</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Nombre Completo</label>
+                        <p id="profileFullName">Sin datos</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Fecha de Nacimiento</label>
+                        <p id="profileBirthDate">Sin datos</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Documento de Identidad</label>
+                        <p id="profileDocument">Sin datos</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Correo ElectrÃ³nico</label>
+                        <p id="profileEmail">Sin datos</p>
+                    </div>
+                    <div class="info-item">
+                        <label>TelÃ©fono</label>
+                        <p id="profilePhone">Sin datos</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Tipo Documento</label>
+                        <p id="profileDocType">Sin datos</p>
+                    </div>
+                </div>
+                <button class="btn-edit-profile">Editar Perfil</button>
+            </section>
+
+            <section class="perfil-section">
+                <h3>PrÃ³ximas Citas</h3>
+                <div class="appointments-container" id="appointmentsList">
+                    <div class="no-appointments">
+                        <i class="fas fa-calendar-times"></i>
+                        <p>No tienes citas agendadas</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="perfil-section">
+                <h3>Historial MÃ©dico Reciente</h3>
+                <div class="medical-log" id="medicalHistory">
+                    <div class="no-history">
+                        <p>No hay historial mÃ©dico registrado</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+

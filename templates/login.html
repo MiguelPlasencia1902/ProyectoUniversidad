@@ -1,0 +1,66 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital GeoSalud | Ingreso</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="login-card">
+            <div class="header">
+                <div class="logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Hospital GeoSalud </span>
+                </div>
+                <h1>Bienvenido(a)</h1>
+            </div>
+
+            <form action="index.html">
+                <div class="input-group">
+                    <label>NÃºmero de Documento</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-id-card icon-left"></i>
+                        <input type="text" placeholder="Ingresa tu documento" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>ContraseÃ±a</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock icon-left"></i>
+                        <input type="password" id="password" placeholder="Tu contraseÃ±a" required>
+                        <i class="fas fa-eye-slash icon-right" id="togglePassword"></i>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        Recordar Cuenta
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Ingresar</button>
+                <a href="#" class="forgot-link">Â¿Olvidaste tu contraseÃ±a?</a>
+            </form>
+
+            <div class="register-section">
+                <p>Â¿AÃºn no tienes una cuenta GeoSalud?</p>
+                <a href="registro.html" style="text-decoration: none;">
+                    <button type="button" class="btn-secondary">Crear cuenta</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+

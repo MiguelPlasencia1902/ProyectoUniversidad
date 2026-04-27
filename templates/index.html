@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoSalud | Presentación para Clínicas</title>
+    <meta name="description" content="GeoSalud es una propuesta de plataforma para clínicas que integra geolocalización, catálogo de especialidades y agendamiento inteligente.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/presentation.css' %}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="container header-row">
+                <a class="brand" href="#inicio">
+                    <span class="brand-mark"><i class="fa-solid fa-heart-pulse"></i></span>
+                    <span class="brand-copy">
+                        <strong>GeoSalud</strong>
+                    </span>
+                </a>
+                <nav class="site-nav">
+                    <a href="#problema">Problema</a>
+                    <a href="#solucion">Solución</a>
+                    <a href="#capacidades">Capacidades</a>
+                    <a href="#beneficios">Beneficios</a>
+                </nav>
+                <a class="header-cta" href="#contacto">Solicitar demo</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero: resume la propuesta de valor desde el primer pantallazo. -->
+            <section class="hero" id="inicio">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <h1>La propuesta digital para clínicas que quieren captar pacientes cercanos y ordenar su agenda médica.</h1>
+                        <p class="hero-text">
+                            GeoSalud presenta una plataforma que conecta geolocalización, catálogo de especialidades,
+                            staff médico y disponibilidad en tiempo real para acelerar el acceso a la atención.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#solucion">Ver propuesta</a>
+                            <a class="btn btn-secondary" href="#contacto">Hablar con el equipo</a>
+                        </div>
+                        <ul class="hero-points">
+                            <li>Localización de centros médicos por cercanía.</li>
+                            <li>Reserva de atención en menos de tres pasos.</li>
+                            <li>Panel administrativo para clínicas y personal médico.</li>
+                        </ul>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-card hero-card-main reveal">
+                            <div class="card-topline">
+                                <span>GeoSalud Platform</span>
+                                <span class="status-dot">Demo conceptual</span>
+                            </div>
+                            <div class="hero-diagram">
+                                <div class="diagram-node accent-a">
+                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                    <strong>GPS + mapa</strong>
+                                    <span>Centros cercanos</span>
+                                </div>
+                                <div class="diagram-node accent-b">
+                                    <i class="fa-solid fa-user-doctor"></i>
+                                    <strong>Especialidades</strong>
+                                    <span>Staff y horarios</span>
+                                </div>
+                                <div class="diagram-node accent-c">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                    <strong>Agendamiento</strong>
+                                    <span>Confirmación rápida</span>
+                                </div>
+                            </div>
+                            <div class="hero-strip">
+                                <span><i class="fa-solid fa-bolt"></i> Filtros internos &lt; 1 segundo</span>
+                                <span><i class="fa-solid fa-shield-heart"></i> Base para datos sensibles</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-note reveal">
+                            <span class="note-tag">Enfoque B2B</span>
+                            <p>La web funciona como vitrina comercial del sistema ante clínicas interesadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Métricas cortas para reforzar la idea general sin volverlo técnico. -->
+            <section class="metrics">
+                <div class="container metrics-grid">
+                    <article class="metric reveal">
+                        <span class="metric-value" data-count="3">0</span>
+                        <p>pasos para completar una reserva</p>
+                    </article>
+                    <article class="metric reveal">
+                        <span class="metric-value" data-count="4">0</span>
+                        <p>módulos principales del sistema</p>
+                    </article>
+                    <article class="metric reveal">
+                        <span class="metric-value" data-count="99">0</span>
+                        <p>por ciento de disponibilidad objetivo</p>
+                    </article>
+                    <article class="metric reveal">
+                        <span class="metric-value" data-count="1">0</span>
+                        <p>segundo máximo para filtrado interno</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Problema: contextualiza por qué una clínica querría esta solución. -->
+            <section class="section-block" id="problema">
+                <div class="container split-layout">
+                    <div class="section-copy reveal">
+                        <p class="eyebrow">Problema detectado</p>
+                        <h2>Muchos pacientes no saben qué clínica cercana tiene la especialidad disponible en el momento que la necesitan.</h2>
+                        <p>
+                            El documento del proyecto parte de una fricción concreta en zonas urbanas del Perú:
+                            buscar atención médica especializada suele implicar llamadas, desplazamientos innecesarios
+                            y poca visibilidad de disponibilidad real.
+                        </p>
+                    </div>
+                    <div class="problem-panel reveal">
+                        <article>
+                            <i class="fa-solid fa-route"></i>
+                            <strong>Desplazamientos sin certeza</strong>
+                            <p>El usuario puede llegar a un centro sin confirmar especialista ni cupo.</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <strong>Procesos fragmentados</strong>
+                            <p>La agenda, el staff y la atención suelen consultarse por canales separados.</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-clock"></i>
+                            <strong>Tiempo de respuesta lento</strong>
+                            <p>La búsqueda manual no escala cuando la demanda sube o la clínica tiene varias sedes.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solución: presenta el producto como propuesta comercial. -->
+            <section class="section-block accent-section" id="solucion">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">Propuesta de valor</p>
+                        <h2>GeoSalud unifica descubrimiento, especialidades, horarios y reserva en una sola experiencia.</h2>
+                        <p>
+                            La plataforma está pensada para mostrar centros médicos cercanos, filtrar por especialidad y
+                            convertir la intención del paciente en una cita confirmada con menos fricción.
+                        </p>
+                    </div>
+
+                    <div class="feature-grid">
+                        <article class="feature-card reveal">
+                            <span>01</span>
+                            <h3>Geolocalización médica</h3>
+                            <p>Identifica centros cercanos mediante GPS y los ordena por distancia para acelerar la búsqueda.</p>
+                        </article>
+                        <article class="feature-card reveal">
+                            <span>02</span>
+                            <h3>Catálogo de especialidades</h3>
+                            <p>Relaciona cada clínica con sus áreas médicas, doctores asignados y horarios disponibles.</p>
+                        </article>
+                        <article class="feature-card reveal">
+                            <span>03</span>
+                            <h3>Agendamiento inteligente</h3>
+                            <p>Permite seleccionar centro, especialidad y turno dentro de un flujo corto y entendible.</p>
+                        </article>
+                        <article class="feature-card reveal">
+                            <span>04</span>
+                            <h3>Panel para clínicas</h3>
+                            <p>Facilita la gestión de staff, disponibilidad y citas desde una interfaz administrativa propia.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Capacidades: muestra qué cubre la plataforma sin venderla como sistema final. -->
+            <section class="section-block" id="capacidades">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">Capacidades clave</p>
+                        <h2>La propuesta combina búsqueda, agenda y gestión clínica dentro de una sola experiencia.</h2>
+                    </div>
+
+                    <div class="module-grid">
+                        <article class="module-card reveal">
+                            <h3>Búsqueda y geolocalización</h3>
+                            <p>Mapa, detección de ubicación, radio de búsqueda y selección del centro médico más conveniente.</p>
+                            <ul>
+                                <li>Centros cercanos por GPS</li>
+                                <li>Búsqueda por nombre de clínica</li>
+                                <li>Visualización de distancia</li>
+                            </ul>
+                        </article>
+
+                        <article class="module-card reveal">
+                            <h3>Gestión de centros y especialidades</h3>
+                            <p>Backend orientado a médicos, áreas clínicas y cupos para construir una oferta confiable.</p>
+                            <ul>
+                                <li>Catálogo de especialidades</li>
+                                <li>Perfil de staff médico</li>
+                                <li>Sincronización de horarios</li>
+                            </ul>
+                        </article>
+
+                        <article class="module-card reveal">
+                            <h3>Reserva y seguimiento del paciente</h3>
+                            <p>Flujo breve de reserva con confirmación visual y espacio de gestión de citas.</p>
+                            <ul>
+                                <li>Reserva en tres pasos</li>
+                                <li>Confirmación de cita</li>
+                                <li>Vista de “Mis citas”</li>
+                            </ul>
+                        </article>
+
+                        <article class="module-card reveal">
+                            <h3>Dashboard administrativo</h3>
+                            <p>Interfaz para clínicas que centraliza la disponibilidad médica y la agenda diaria.</p>
+                            <ul>
+                                <li>Gestión de médicos</li>
+                                <li>Configuración de turnos</li>
+                                <li>Listado diario de pacientes</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Beneficios: aterriza el valor para clínicas, pacientes y personal médico. -->
+            <section class="section-block contrast-section" id="beneficios">
+                <div class="container benefit-layout">
+                    <div class="benefit-board reveal">
+                        <div class="board-header">
+                            <span>Beneficio para clínicas</span>
+                            <span class="board-pill">Prioridad comercial</span>
+                        </div>
+                        <div class="board-list">
+                            <div>
+                                <strong>Más visibilidad local</strong>
+                                <p>La clínica aparece cuando el paciente realmente la necesita y se encuentra cerca.</p>
+                            </div>
+                            <div>
+                                <strong>Agenda ordenada</strong>
+                                <p>El staff y los turnos se administran desde una sola plataforma.</p>
+                            </div>
+                            <div>
+                                <strong>Menos fricción en la captación</strong>
+                                <p>La búsqueda y la reserva ocurren dentro del mismo flujo digital.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="audience-stack reveal">
+                        <article>
+                            <h3>Pacientes</h3>
+                            <p>Encuentran especialistas cercanos, comparan opciones y agendan rápido.</p>
+                        </article>
+                        <article>
+                            <h3>Clínicas y centros médicos</h3>
+                            <p>Digitalizan su agenda y exponen mejor su oferta médica en su zona de influencia.</p>
+                        </article>
+                        <article>
+                            <h3>Personal médico</h3>
+                            <p>Gestiona horarios y disponibilidad con una estructura más clara y centralizada.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resultados: cierra con el impacto esperado de la propuesta. -->
+            <section class="section-block roadmap-section">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">Resultados esperados</p>
+                        <h2>La propuesta apunta a mejorar acceso, ocupación y orden operativo.</h2>
+                    </div>
+
+                    <div class="timeline">
+                        <article class="timeline-item reveal">
+                            <span class="timeline-step">01</span>
+                            <div>
+                                <h3>Menor tiempo de búsqueda</h3>
+                                <p>Los pacientes identifican especialistas disponibles con mucha menos fricción.</p>
+                            </div>
+                        </article>
+                        <article class="timeline-item reveal">
+                            <span class="timeline-step">02</span>
+                            <div>
+                                <h3>Mejor asistencia a citas</h3>
+                                <p>La agenda digital facilita confirmaciones y seguimiento de reservas.</p>
+                            </div>
+                        </article>
+                        <article class="timeline-item reveal">
+                            <span class="timeline-step">03</span>
+                            <div>
+                                <h3>Distribución más eficiente</h3>
+                                <p>La cercanía geográfica ayuda a repartir demanda entre centros y horarios disponibles.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cierre de contacto para dejar una llamada a presentación o demo. -->
+            <section class="contact-section" id="contacto">
+                <div class="container contact-card reveal">
+                    <div>
+                        <p class="eyebrow">Presentación del proyecto</p>
+                        <h2>GeoSalud se muestra aquí como una propuesta para clínicas interesadas en digitalizar búsqueda y agenda médica.</h2>
+                        <p>
+                            Esta web resume el caso de estudio, la visión del sistema y los beneficios operativos que la
+                            plataforma puede ofrecer al ecosistema de salud.
+                        </p>
+                    </div>
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="mailto:contacto@geosalud.pe">Solicitar presentación</a>
+                        <a class="btn btn-secondary" href="#inicio">Volver al inicio</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-row">
+                <p>GeoSalud · Avance 1 del curso Desarrollo Basado en Plataformas.</p>
+                <p>Propuesta académica orientada a clínicas, centros médicos y pacientes.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'js/presentation.js' %}"></script>
+</body>
+</html>
